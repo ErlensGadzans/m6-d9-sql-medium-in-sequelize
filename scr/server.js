@@ -15,6 +15,8 @@ server.get("/", (req, res, next) => {
 
 const port = process.env.PORT || 3088;
 
-server.listen(port, () => {
-  console.log("This port is running on port:  " + port);
+db.sequelize.sync({ force: false }).then((result) => {
+  server.listen(port, () => {
+    console.log("This port is running on port:  " + port);
+  });
 });
