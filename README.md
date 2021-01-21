@@ -1,0 +1,1 @@
+# m6-d9-sql-medium-in-sequelize
